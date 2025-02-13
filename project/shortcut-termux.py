@@ -19,8 +19,15 @@ size_Font = 'CTRL + ALT + +/-'
 pilih_Sesi_Aktif = 'CTRL + ALT + 1-9'
 hapus_Sesi_Ini = 'CTRL + SHIFT + D'
 
-def tampilkan():
-    shortcut = {
-            'Menambahkan sesion baru' : sesi_Baru,
-            
-    }
+def tampilkan(pilih):
+    match pilih:
+        case 1:
+            list_1 = [sesi_Baru, set_Nama_Sesi,]
+            list_2 = [pindah_Sesi_Sebelumnya, pindah_Sesi_Awal_Setelahnya]
+            list_3 = [list_1, list_2]
+            for lsesi in list_3:
+                print(f'Awal : {lsesi[0]}')
+
+
+input_angka = int(input('Masukkan Pilihan Angka : '))
+tampilkan(input_angka)
